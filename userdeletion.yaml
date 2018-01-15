@@ -1,1 +1,13 @@
 ---
+- hosts: all
+  become: yes
+  vars:
+    username: test2
+
+  tasks:
+  - name: Deleting the user {{ username }}
+    user:
+      name: "{{ username }}"
+      state: absent
+      remove: yes
+      force: yes
