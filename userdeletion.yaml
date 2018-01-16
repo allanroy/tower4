@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   vars:
-    username: test2
+    username: test1
 
   tasks:
   - name: Deleting the user {{ username }}
